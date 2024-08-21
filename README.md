@@ -1,6 +1,6 @@
 ## pulumi-history-as-git
 
-<video src="demo.mp4" width="320" height="240" controls></video>
+https://github.com/user-attachments/assets/faa7aa73-7605-4e8e-aa5b-c831e1225b14
 
 An easy way to check the history of a Pulumi stack using Git commands.
 
