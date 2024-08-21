@@ -1,6 +1,6 @@
 ## pulumi-history-as-git
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/bperel/pulumi-history-as-git.svg)](https://greenkeeper.io/)
+<video src="demo.mp4" width="320" height="240" controls></video>
 
 An easy way to check the history of a Pulumi stack using Git commands.
 
@@ -11,5 +11,3 @@ An easy way to check the history of a Pulumi stack using Git commands.
 ### On a local environment
 
 `npx ts-node index.ts`
-
-![](demo.mp4)
