@@ -1,0 +1,5 @@
+.eslintcache
+.idea
+index.js
+node_modules/
+stack-history
