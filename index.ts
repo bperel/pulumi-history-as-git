@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 import { resolve, join } from "path";
+import { parseArgs } from 'node:util';
 import * as fs from "fs";
-import * as git from "isomorphic-git";
+import { add, commit, init } from "isomorphic-git";
 import { NodeHttpHandler } from "@smithy/node-http-handler";
 import {
   S3Client,
@@ -15,6 +16,14 @@ import * as cliProgress from "cli-progress";
 import * as dayjs from "dayjs";
 import { Agent } from "https";
 import { execSync } from "child_process";
+
+const git = { add, commit, init };
+
+const { values: { "keep-ciphertext": keepCiphertext } } = parseArgs({
+  options: {
+    'keep-ciphertext': { type: 'boolean', default: false },
+  }
+})
 
 const client = new S3Client({
   requestHandler: new NodeHttpHandler({
@@ -68,6 +77,9 @@ const createCommitForCheckpoint = async (
   const username = metadata.environment["git.author"];
   const date = metadata.startTime;
 
+  if (!keepCiphertext) {
+    fileContents = fileContents.replace(/"ciphertext": "(.*?)"/g, '"ciphertext": "..."');
+  }
   fs.writeFileSync(join(dir, fileName), fileContents);
   await git.add({ fs, dir, filepath: fileName });
 
