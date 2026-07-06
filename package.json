@@ -15,7 +15,7 @@
     "@types/cli-progress": "^3.11.6",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^18.0.0",
+    "@types/node": "^24.0.0",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
     "eslint": "^9.9.0",
@@ -23,7 +23,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "typescript": "^6.0.3"
   },
   "description": "Check a Pulumi stack history using git commands",
   "main": "index.js",
@@ -44,7 +44,7 @@
     "git"
   ],
   "engines": {
-    "node": "^18.0.0"
+    "node": "^24.0.0"
   },
   "author": "Bruno Perel",
   "license": "Apache-2.0",
