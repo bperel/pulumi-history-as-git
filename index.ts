@@ -13,7 +13,7 @@ import {
 } from "@aws-sdk/client-s3";
 import * as cliProgress from "cli-progress";
 
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 import { Agent } from "https";
 import { execSync } from "child_process";
 
